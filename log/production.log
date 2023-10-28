@@ -1,0 +1,414 @@
+I, [2023-10-27T21:15:07.500659 #267039]  INFO -- : [45297a7b-a67c-43ec-9cc6-e8694d1d8e70] Started GET "/api/v1/ads" for 127.0.0.1 at 2023-10-27 21:15:07 +0300
+I, [2023-10-27T21:15:07.500966 #267039]  INFO -- : [d812e388-1ca6-4794-8fd9-71b7988eb03d] Started GET "/api/v1/profiles/show_profile" for 127.0.0.1 at 2023-10-27 21:15:07 +0300
+I, [2023-10-27T21:15:07.505611 #267039]  INFO -- : [d812e388-1ca6-4794-8fd9-71b7988eb03d] Processing by Api::V1::ProfilesController#show_profile as JSON
+I, [2023-10-27T21:15:07.504914 #267039]  INFO -- : [45297a7b-a67c-43ec-9cc6-e8694d1d8e70] Processing by Api::V1::AdsController#index as JSON
+I, [2023-10-27T21:15:07.567582 #267039]  INFO -- : [d812e388-1ca6-4794-8fd9-71b7988eb03d] Completed 500 Internal Server Error in 62ms (Allocations: 2287)
+F, [2023-10-27T21:15:07.572004 #267039] FATAL -- : [d812e388-1ca6-4794-8fd9-71b7988eb03d]   
+[d812e388-1ca6-4794-8fd9-71b7988eb03d] ActiveRecord::ConnectionNotEstablished (connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no password supplied
+):
+[d812e388-1ca6-4794-8fd9-71b7988eb03d]   
+[d812e388-1ca6-4794-8fd9-71b7988eb03d] app/controllers/api/v1/api_controller.rb:44:in `user_token_encode_and_decode'
+[d812e388-1ca6-4794-8fd9-71b7988eb03d] app/controllers/api/v1/api_controller.rb:33:in `authenticate_request'
+I, [2023-10-27T21:15:07.582873 #267039]  INFO -- : [45297a7b-a67c-43ec-9cc6-e8694d1d8e70] Completed 500 Internal Server Error in 74ms (Allocations: 4100)
+F, [2023-10-27T21:15:07.583838 #267039] FATAL -- : [45297a7b-a67c-43ec-9cc6-e8694d1d8e70]   
+[45297a7b-a67c-43ec-9cc6-e8694d1d8e70] ActiveRecord::ConnectionNotEstablished (connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no password supplied
+):
+[45297a7b-a67c-43ec-9cc6-e8694d1d8e70]   
+[45297a7b-a67c-43ec-9cc6-e8694d1d8e70] app/controllers/api/v1/api_controller.rb:44:in `user_token_encode_and_decode'
+[45297a7b-a67c-43ec-9cc6-e8694d1d8e70] app/controllers/api/v1/api_controller.rb:33:in `authenticate_request'
+I, [2023-10-27T21:15:40.294445 #267039]  INFO -- : [375a36d4-e181-4455-88c9-62150636d7f9] Started GET "/api/v1/ads" for 127.0.0.1 at 2023-10-27 21:15:40 +0300
+I, [2023-10-27T21:15:40.409277 #267039]  INFO -- : [375a36d4-e181-4455-88c9-62150636d7f9] Processing by Api::V1::AdsController#index as JSON
+I, [2023-10-27T21:15:40.428304 #267039]  INFO -- : [375a36d4-e181-4455-88c9-62150636d7f9] Filter chain halted as :authenticate_request rendered or redirected
+I, [2023-10-27T21:15:40.428447 #267039]  INFO -- : [375a36d4-e181-4455-88c9-62150636d7f9] Completed 401 Unauthorized in 19ms (Views: 9.5ms | Allocations: 368)
+I, [2023-10-27T21:16:06.220909 #267039]  INFO -- : [c68579b9-92fd-453b-bc0d-fcc8437ec268] Started POST "/signup" for 127.0.0.1 at 2023-10-27 21:16:06 +0300
+I, [2023-10-27T21:16:06.245256 #267039]  INFO -- : [c68579b9-92fd-453b-bc0d-fcc8437ec268] Processing by Users::RegistrationsController#create as JSON
+I, [2023-10-27T21:16:06.249930 #267039]  INFO -- : [c68579b9-92fd-453b-bc0d-fcc8437ec268]   Parameters: {"user"=>{"email"=>"jpguantai@gmail.com", "password"=>"[FILTERED]", "username"=>"Guantai"}}
+I, [2023-10-27T21:16:06.288394 #267039]  INFO -- : [c68579b9-92fd-453b-bc0d-fcc8437ec268] Completed 500 Internal Server Error in 38ms (Allocations: 1478)
+F, [2023-10-27T21:16:06.289474 #267039] FATAL -- : [c68579b9-92fd-453b-bc0d-fcc8437ec268]   
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] ActiveRecord::ConnectionNotEstablished (connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no password supplied
+):
+[c68579b9-92fd-453b-bc0d-fcc8437ec268]   
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/connection_handling.rb:280:in `connection'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/model_schema.rb:580:in `load_schema!'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/attributes.rb:264:in `load_schema!'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/encryption/encryptable_record.rb:122:in `load_schema!'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/model_schema.rb:566:in `block in load_schema'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/model_schema.rb:563:in `synchronize'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/model_schema.rb:563:in `load_schema'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/model_schema.rb:429:in `attribute_types'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/attribute_methods.rb:187:in `_has_attribute?'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/inheritance.rb:60:in `new'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] devise (4.9.2) lib/devise/models/registerable.rb:22:in `new_with_session'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] devise (4.9.2) app/controllers/devise/registrations_controller.rb:100:in `build_resource'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] devise (4.9.2) app/controllers/devise/registrations_controller.rb:17:in `create'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/abstract_controller/base.rb:215:in `process_action'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_controller/metal/rendering.rb:165:in `process_action'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activesupport (7.0.5) lib/active_support/callbacks.rb:107:in `run_callbacks'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/abstract_controller/callbacks.rb:233:in `process_action'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activesupport (7.0.5) lib/active_support/notifications.rb:206:in `block in instrument'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activesupport (7.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activesupport (7.0.5) lib/active_support/notifications.rb:206:in `instrument'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activerecord (7.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/abstract_controller/base.rb:151:in `process'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionview (7.0.5) lib/action_view/rendering.rb:39:in `process'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_controller/metal.rb:188:in `dispatch'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_controller/metal.rb:251:in `dispatch'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:852:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] rack (2.2.7) lib/rack/builder.rb:244:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] warden (1.2.9) lib/warden/manager.rb:34:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] rack (2.2.7) lib/rack/etag.rb:27:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] rack (2.2.7) lib/rack/head.rb:12:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:131:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] railties (7.0.5) lib/rails/engine.rb:530:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+[c68579b9-92fd-453b-bc0d-fcc8437ec268] puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+I, [2023-10-27T21:16:33.468915 #267039]  INFO -- : [e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] Started POST "/signup" for 127.0.0.1 at 2023-10-27 21:16:33 +0300
+I, [2023-10-27T21:16:33.472284 #267039]  INFO -- : [e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] Processing by Users::RegistrationsController#create as JSON
+I, [2023-10-27T21:16:33.472398 #267039]  INFO -- : [e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44]   Parameters: {"user"=>{"email"=>"jpguantai@gmail.com", "password"=>"[FILTERED]", "username"=>"paul"}}
+I, [2023-10-27T21:16:33.501897 #267039]  INFO -- : [e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] Completed 500 Internal Server Error in 29ms (Allocations: 1149)
+F, [2023-10-27T21:16:33.503767 #267039] FATAL -- : [e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44]   
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] ActiveRecord::ConnectionNotEstablished (connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no password supplied
+):
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44]   
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/connection_handling.rb:280:in `connection'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/model_schema.rb:580:in `load_schema!'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/attributes.rb:264:in `load_schema!'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/encryption/encryptable_record.rb:122:in `load_schema!'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/model_schema.rb:566:in `block in load_schema'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/model_schema.rb:563:in `synchronize'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/model_schema.rb:563:in `load_schema'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/model_schema.rb:429:in `attribute_types'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/attribute_methods.rb:187:in `_has_attribute?'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/inheritance.rb:60:in `new'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] devise (4.9.2) lib/devise/models/registerable.rb:22:in `new_with_session'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] devise (4.9.2) app/controllers/devise/registrations_controller.rb:100:in `build_resource'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] devise (4.9.2) app/controllers/devise/registrations_controller.rb:17:in `create'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/abstract_controller/base.rb:215:in `process_action'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_controller/metal/rendering.rb:165:in `process_action'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activesupport (7.0.5) lib/active_support/callbacks.rb:107:in `run_callbacks'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/abstract_controller/callbacks.rb:233:in `process_action'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activesupport (7.0.5) lib/active_support/notifications.rb:206:in `block in instrument'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activesupport (7.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activesupport (7.0.5) lib/active_support/notifications.rb:206:in `instrument'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activerecord (7.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/abstract_controller/base.rb:151:in `process'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionview (7.0.5) lib/action_view/rendering.rb:39:in `process'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_controller/metal.rb:188:in `dispatch'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_controller/metal.rb:251:in `dispatch'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:852:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] rack (2.2.7) lib/rack/builder.rb:244:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] warden (1.2.9) lib/warden/manager.rb:34:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] rack (2.2.7) lib/rack/etag.rb:27:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] rack (2.2.7) lib/rack/head.rb:12:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:131:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] railties (7.0.5) lib/rails/engine.rb:530:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+[e4d3f907-f3c3-45c6-b7d3-4fa7cd7f1a44] puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+I, [2023-10-27T22:13:33.452795 #277925]  INFO -- : [1c04575a-5a60-4aee-a0cf-1206fa79754b] Started GET "/" for 127.0.0.1 at 2023-10-27 22:13:33 +0300
+F, [2023-10-27T22:13:33.459122 #277925] FATAL -- : [1c04575a-5a60-4aee-a0cf-1206fa79754b]   
+[1c04575a-5a60-4aee-a0cf-1206fa79754b] ActionController::RoutingError (No route matches [GET] "/"):
+[1c04575a-5a60-4aee-a0cf-1206fa79754b]   
+I, [2023-10-28T06:52:25.938877 #277925]  INFO -- : [6f908262-fe0c-4828-b560-c06fff96addf] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2620dae7a3db34c696a0d517d056c68e8792ff6f/bg-home-2.jpeg" for 127.0.0.1 at 2023-10-28 06:52:25 +0300
+I, [2023-10-28T06:52:25.952495 #277925]  INFO -- : [62ca29a7-72e7-438f-a080-c96510d708e0] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f553437460b488be5d0887e3bb057b9e4516a6e/crypto.png" for 127.0.0.1 at 2023-10-28 06:52:25 +0300
+I, [2023-10-28T06:52:25.956398 #277925]  INFO -- : [de32134d-f5c1-41e1-8ece-daed731fa84a] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b3bef8fda247f0b4d0adf95121b830503289aeba/logo-dark-2.png" for 127.0.0.1 at 2023-10-28 06:52:25 +0300
+I, [2023-10-28T06:52:25.944988 #277925]  INFO -- : [ed7b8b82-bfb6-47f9-a90e-8e184e869f93] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2ad301ddacab5466199dfb3e64055345707c189/crypto.png" for 127.0.0.1 at 2023-10-28 06:52:25 +0300
+I, [2023-10-28T06:52:25.963050 #277925]  INFO -- : [ed7b8b82-bfb6-47f9-a90e-8e184e869f93] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:52:25.963450 #277925]  INFO -- : [ed7b8b82-bfb6-47f9-a90e-8e184e869f93]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2ad301ddacab5466199dfb3e64055345707c189", "filename"=>"crypto"}
+I, [2023-10-28T06:52:25.963374 #277925]  INFO -- : [62ca29a7-72e7-438f-a080-c96510d708e0] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:52:25.980049 #277925]  INFO -- : [62ca29a7-72e7-438f-a080-c96510d708e0]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f553437460b488be5d0887e3bb057b9e4516a6e", "filename"=>"crypto"}
+I, [2023-10-28T06:52:25.980539 #277925]  INFO -- : [62ca29a7-72e7-438f-a080-c96510d708e0] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:52:25.981347 #277925]  INFO -- : [62ca29a7-72e7-438f-a080-c96510d708e0] Completed 404 Not Found in 1ms (Allocations: 141)
+I, [2023-10-28T06:52:25.979937 #277925]  INFO -- : [ed7b8b82-bfb6-47f9-a90e-8e184e869f93] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:52:25.981936 #277925]  INFO -- : [ed7b8b82-bfb6-47f9-a90e-8e184e869f93] Completed 404 Not Found in 18ms (Allocations: 1015)
+I, [2023-10-28T06:52:25.963719 #277925]  INFO -- : [de32134d-f5c1-41e1-8ece-daed731fa84a] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:52:25.984381 #277925]  INFO -- : [de32134d-f5c1-41e1-8ece-daed731fa84a]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b3bef8fda247f0b4d0adf95121b830503289aeba", "filename"=>"logo-dark-2"}
+I, [2023-10-28T06:52:25.985104 #277925]  INFO -- : [de32134d-f5c1-41e1-8ece-daed731fa84a] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:52:25.985302 #277925]  INFO -- : [de32134d-f5c1-41e1-8ece-daed731fa84a] Completed 404 Not Found in 1ms (Allocations: 129)
+I, [2023-10-28T06:52:25.945389 #277925]  INFO -- : [6e4e6ee7-e90f-480a-a51c-6c24e3a8129d] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b23f3d382ab99415b1bfffa2f580dc76c97d8f3/logo-dark-2.png" for 127.0.0.1 at 2023-10-28 06:52:25 +0300
+I, [2023-10-28T06:52:25.962236 #277925]  INFO -- : [6f908262-fe0c-4828-b560-c06fff96addf] Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+I, [2023-10-28T06:52:25.986428 #277925]  INFO -- : [6f908262-fe0c-4828-b560-c06fff96addf]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2620dae7a3db34c696a0d517d056c68e8792ff6f", "filename"=>"bg-home-2"}
+I, [2023-10-28T06:52:25.989170 #277925]  INFO -- : [6e4e6ee7-e90f-480a-a51c-6c24e3a8129d] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:52:25.989289 #277925]  INFO -- : [6e4e6ee7-e90f-480a-a51c-6c24e3a8129d]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b23f3d382ab99415b1bfffa2f580dc76c97d8f3", "filename"=>"logo-dark-2"}
+I, [2023-10-28T06:52:25.989868 #277925]  INFO -- : [6e4e6ee7-e90f-480a-a51c-6c24e3a8129d] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:52:25.990022 #277925]  INFO -- : [6e4e6ee7-e90f-480a-a51c-6c24e3a8129d] Completed 404 Not Found in 1ms (Allocations: 129)
+I, [2023-10-28T06:52:25.992002 #277925]  INFO -- : [05b29e8a-3a05-480f-8ca7-bc28ca5b1156] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--45caae8adee47860d763a17e3e0617609f12d419/MERAPi.png" for 127.0.0.1 at 2023-10-28 06:52:25 +0300
+I, [2023-10-28T06:52:25.987038 #277925]  INFO -- : [6f908262-fe0c-4828-b560-c06fff96addf] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:52:25.993632 #277925]  INFO -- : [6f908262-fe0c-4828-b560-c06fff96addf] Completed 404 Not Found in 7ms (Allocations: 1606)
+I, [2023-10-28T06:52:25.993418 #277925]  INFO -- : [05b29e8a-3a05-480f-8ca7-bc28ca5b1156] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:52:25.994910 #277925]  INFO -- : [05b29e8a-3a05-480f-8ca7-bc28ca5b1156]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--45caae8adee47860d763a17e3e0617609f12d419", "filename"=>"MERAPi"}
+I, [2023-10-28T06:52:25.997022 #277925]  INFO -- : [05b29e8a-3a05-480f-8ca7-bc28ca5b1156] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:52:25.997850 #277925]  INFO -- : [05b29e8a-3a05-480f-8ca7-bc28ca5b1156] Completed 404 Not Found in 3ms (Allocations: 170)
+I, [2023-10-28T06:52:25.999370 #277925]  INFO -- : [d1e08582-d674-4116-b23c-fa2d30153d92] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c63997763e08eabd30cbcd3beb7e1d3a512c7909/MERAPi.png" for 127.0.0.1 at 2023-10-28 06:52:25 +0300
+I, [2023-10-28T06:52:26.005389 #277925]  INFO -- : [d1e08582-d674-4116-b23c-fa2d30153d92] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:52:26.006482 #277925]  INFO -- : [d1e08582-d674-4116-b23c-fa2d30153d92]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c63997763e08eabd30cbcd3beb7e1d3a512c7909", "filename"=>"MERAPi"}
+I, [2023-10-28T06:52:26.007482 #277925]  INFO -- : [d1e08582-d674-4116-b23c-fa2d30153d92] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:52:26.007661 #277925]  INFO -- : [d1e08582-d674-4116-b23c-fa2d30153d92] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:52:26.018924 #277925]  INFO -- : [96218829-a61b-4398-9b63-6f9d26392139] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--23bf60b7f749a314da9a2dbe6454ff266c8f2f63/rinjani-1.png" for 127.0.0.1 at 2023-10-28 06:52:26 +0300
+I, [2023-10-28T06:52:26.020300 #277925]  INFO -- : [96218829-a61b-4398-9b63-6f9d26392139] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:52:26.020430 #277925]  INFO -- : [96218829-a61b-4398-9b63-6f9d26392139]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--23bf60b7f749a314da9a2dbe6454ff266c8f2f63", "filename"=>"rinjani-1"}
+I, [2023-10-28T06:52:26.021038 #277925]  INFO -- : [96218829-a61b-4398-9b63-6f9d26392139] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:52:26.021204 #277925]  INFO -- : [96218829-a61b-4398-9b63-6f9d26392139] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:58:13.123983 #277925]  INFO -- : [f36fcd71-b068-48d4-9e0d-31cda1cebfe7] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2620dae7a3db34c696a0d517d056c68e8792ff6f/bg-home-2.jpeg" for 127.0.0.1 at 2023-10-28 06:58:13 +0300
+I, [2023-10-28T06:58:13.125756 #277925]  INFO -- : [f36fcd71-b068-48d4-9e0d-31cda1cebfe7] Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+I, [2023-10-28T06:58:13.125857 #277925]  INFO -- : [f36fcd71-b068-48d4-9e0d-31cda1cebfe7]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2620dae7a3db34c696a0d517d056c68e8792ff6f", "filename"=>"bg-home-2"}
+I, [2023-10-28T06:58:13.132193 #277925]  INFO -- : [f36fcd71-b068-48d4-9e0d-31cda1cebfe7] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:58:13.134183 #277925]  INFO -- : [f36fcd71-b068-48d4-9e0d-31cda1cebfe7] Completed 404 Not Found in 8ms (Allocations: 562)
+I, [2023-10-28T06:58:13.132853 #277925]  INFO -- : [c562cf07-8e52-41fd-8deb-1e2acbc2a7a6] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--45caae8adee47860d763a17e3e0617609f12d419/MERAPi.png" for 127.0.0.1 at 2023-10-28 06:58:13 +0300
+I, [2023-10-28T06:58:13.141111 #277925]  INFO -- : [c562cf07-8e52-41fd-8deb-1e2acbc2a7a6] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:58:13.142303 #277925]  INFO -- : [c562cf07-8e52-41fd-8deb-1e2acbc2a7a6]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--45caae8adee47860d763a17e3e0617609f12d419", "filename"=>"MERAPi"}
+I, [2023-10-28T06:58:13.142977 #277925]  INFO -- : [c562cf07-8e52-41fd-8deb-1e2acbc2a7a6] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:58:13.143141 #277925]  INFO -- : [c562cf07-8e52-41fd-8deb-1e2acbc2a7a6] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:58:13.133722 #277925]  INFO -- : [14de8429-e69a-4558-8518-8cb875956497] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f553437460b488be5d0887e3bb057b9e4516a6e/crypto.png" for 127.0.0.1 at 2023-10-28 06:58:13 +0300
+I, [2023-10-28T06:58:13.151557 #277925]  INFO -- : [14de8429-e69a-4558-8518-8cb875956497] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:58:13.151665 #277925]  INFO -- : [14de8429-e69a-4558-8518-8cb875956497]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f553437460b488be5d0887e3bb057b9e4516a6e", "filename"=>"crypto"}
+I, [2023-10-28T06:58:13.152233 #277925]  INFO -- : [14de8429-e69a-4558-8518-8cb875956497] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:58:13.152401 #277925]  INFO -- : [14de8429-e69a-4558-8518-8cb875956497] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:58:13.124648 #277925]  INFO -- : [5f31c03a-ff88-47e5-8b8a-7d3398c28080] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2ad301ddacab5466199dfb3e64055345707c189/crypto.png" for 127.0.0.1 at 2023-10-28 06:58:13 +0300
+I, [2023-10-28T06:58:13.154635 #277925]  INFO -- : [5f31c03a-ff88-47e5-8b8a-7d3398c28080] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:58:13.154782 #277925]  INFO -- : [5f31c03a-ff88-47e5-8b8a-7d3398c28080]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2ad301ddacab5466199dfb3e64055345707c189", "filename"=>"crypto"}
+I, [2023-10-28T06:58:13.155389 #277925]  INFO -- : [5f31c03a-ff88-47e5-8b8a-7d3398c28080] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:58:13.155538 #277925]  INFO -- : [5f31c03a-ff88-47e5-8b8a-7d3398c28080] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:58:13.133211 #277925]  INFO -- : [8cf8b719-9490-40e4-af86-a7b998e491d6] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b3bef8fda247f0b4d0adf95121b830503289aeba/logo-dark-2.png" for 127.0.0.1 at 2023-10-28 06:58:13 +0300
+I, [2023-10-28T06:58:13.158847 #277925]  INFO -- : [8cf8b719-9490-40e4-af86-a7b998e491d6] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:58:13.158972 #277925]  INFO -- : [8cf8b719-9490-40e4-af86-a7b998e491d6]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b3bef8fda247f0b4d0adf95121b830503289aeba", "filename"=>"logo-dark-2"}
+I, [2023-10-28T06:58:13.159571 #277925]  INFO -- : [8cf8b719-9490-40e4-af86-a7b998e491d6] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:58:13.159736 #277925]  INFO -- : [8cf8b719-9490-40e4-af86-a7b998e491d6] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:58:13.162067 #277925]  INFO -- : [f52dd191-45fa-4e0a-bd01-778c9dff97a7] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b23f3d382ab99415b1bfffa2f580dc76c97d8f3/logo-dark-2.png" for 127.0.0.1 at 2023-10-28 06:58:13 +0300
+I, [2023-10-28T06:58:13.164439 #277925]  INFO -- : [f52dd191-45fa-4e0a-bd01-778c9dff97a7] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:58:13.165053 #277925]  INFO -- : [f52dd191-45fa-4e0a-bd01-778c9dff97a7]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b23f3d382ab99415b1bfffa2f580dc76c97d8f3", "filename"=>"logo-dark-2"}
+I, [2023-10-28T06:58:13.167003 #277925]  INFO -- : [f52dd191-45fa-4e0a-bd01-778c9dff97a7] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:58:13.167474 #277925]  INFO -- : [f52dd191-45fa-4e0a-bd01-778c9dff97a7] Completed 404 Not Found in 1ms (Allocations: 127)
+I, [2023-10-28T06:58:13.186028 #277925]  INFO -- : [09a24ad5-1b8a-43c3-a717-870e9941c796] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c63997763e08eabd30cbcd3beb7e1d3a512c7909/MERAPi.png" for 127.0.0.1 at 2023-10-28 06:58:13 +0300
+I, [2023-10-28T06:58:13.191097 #277925]  INFO -- : [09a24ad5-1b8a-43c3-a717-870e9941c796] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:58:13.191229 #277925]  INFO -- : [09a24ad5-1b8a-43c3-a717-870e9941c796]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c63997763e08eabd30cbcd3beb7e1d3a512c7909", "filename"=>"MERAPi"}
+I, [2023-10-28T06:58:13.191918 #277925]  INFO -- : [09a24ad5-1b8a-43c3-a717-870e9941c796] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:58:13.192560 #277925]  INFO -- : [09a24ad5-1b8a-43c3-a717-870e9941c796] Completed 404 Not Found in 1ms (Allocations: 296)
+I, [2023-10-28T06:58:13.192416 #277925]  INFO -- : [06b01312-0514-48d4-881a-950c1b6cda63] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--23bf60b7f749a314da9a2dbe6454ff266c8f2f63/rinjani-1.png" for 127.0.0.1 at 2023-10-28 06:58:13 +0300
+I, [2023-10-28T06:58:13.194545 #277925]  INFO -- : [06b01312-0514-48d4-881a-950c1b6cda63] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:58:13.194661 #277925]  INFO -- : [06b01312-0514-48d4-881a-950c1b6cda63]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--23bf60b7f749a314da9a2dbe6454ff266c8f2f63", "filename"=>"rinjani-1"}
+I, [2023-10-28T06:58:13.195253 #277925]  INFO -- : [06b01312-0514-48d4-881a-950c1b6cda63] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:58:13.195414 #277925]  INFO -- : [06b01312-0514-48d4-881a-950c1b6cda63] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:59:06.839654 #277925]  INFO -- : [2a95f917-68bb-4019-bc00-3bacff06aab1] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2ad301ddacab5466199dfb3e64055345707c189/crypto.png" for 127.0.0.1 at 2023-10-28 06:59:06 +0300
+I, [2023-10-28T06:59:06.840762 #277925]  INFO -- : [2a95f917-68bb-4019-bc00-3bacff06aab1] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:59:06.840878 #277925]  INFO -- : [2a95f917-68bb-4019-bc00-3bacff06aab1]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2ad301ddacab5466199dfb3e64055345707c189", "filename"=>"crypto"}
+I, [2023-10-28T06:59:06.841398 #277925]  INFO -- : [2a95f917-68bb-4019-bc00-3bacff06aab1] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:59:06.841535 #277925]  INFO -- : [2a95f917-68bb-4019-bc00-3bacff06aab1] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:59:06.852131 #277925]  INFO -- : [ba23bc29-a3d7-4b88-bab7-a66fafc17d9e] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b3bef8fda247f0b4d0adf95121b830503289aeba/logo-dark-2.png" for 127.0.0.1 at 2023-10-28 06:59:06 +0300
+I, [2023-10-28T06:59:06.853288 #277925]  INFO -- : [ba23bc29-a3d7-4b88-bab7-a66fafc17d9e] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:59:06.854841 #277925]  INFO -- : [ba23bc29-a3d7-4b88-bab7-a66fafc17d9e]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b3bef8fda247f0b4d0adf95121b830503289aeba", "filename"=>"logo-dark-2"}
+I, [2023-10-28T06:59:06.856894 #277925]  INFO -- : [ba23bc29-a3d7-4b88-bab7-a66fafc17d9e] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:59:06.857106 #277925]  INFO -- : [ba23bc29-a3d7-4b88-bab7-a66fafc17d9e] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:59:06.854533 #277925]  INFO -- : [a2341789-650c-4a40-8e72-2ae2561f2bf4] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b23f3d382ab99415b1bfffa2f580dc76c97d8f3/logo-dark-2.png" for 127.0.0.1 at 2023-10-28 06:59:06 +0300
+I, [2023-10-28T06:59:06.858963 #277925]  INFO -- : [a2341789-650c-4a40-8e72-2ae2561f2bf4] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:59:06.859081 #277925]  INFO -- : [a2341789-650c-4a40-8e72-2ae2561f2bf4]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b23f3d382ab99415b1bfffa2f580dc76c97d8f3", "filename"=>"logo-dark-2"}
+I, [2023-10-28T06:59:06.859612 #277925]  INFO -- : [a2341789-650c-4a40-8e72-2ae2561f2bf4] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:59:06.859746 #277925]  INFO -- : [a2341789-650c-4a40-8e72-2ae2561f2bf4] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:59:06.855465 #277925]  INFO -- : [6f93caec-bae1-461b-b17a-a4b85e5c1dca] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c63997763e08eabd30cbcd3beb7e1d3a512c7909/MERAPi.png" for 127.0.0.1 at 2023-10-28 06:59:06 +0300
+I, [2023-10-28T06:59:06.861389 #277925]  INFO -- : [6f93caec-bae1-461b-b17a-a4b85e5c1dca] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:59:06.861517 #277925]  INFO -- : [6f93caec-bae1-461b-b17a-a4b85e5c1dca]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c63997763e08eabd30cbcd3beb7e1d3a512c7909", "filename"=>"MERAPi"}
+I, [2023-10-28T06:59:06.862082 #277925]  INFO -- : [6f93caec-bae1-461b-b17a-a4b85e5c1dca] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:59:06.862222 #277925]  INFO -- : [6f93caec-bae1-461b-b17a-a4b85e5c1dca] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:59:06.853879 #277925]  INFO -- : [2bafba84-e34b-40e2-9aa1-ccc229186027] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2620dae7a3db34c696a0d517d056c68e8792ff6f/bg-home-2.jpeg" for 127.0.0.1 at 2023-10-28 06:59:06 +0300
+I, [2023-10-28T06:59:06.864113 #277925]  INFO -- : [2bafba84-e34b-40e2-9aa1-ccc229186027] Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+I, [2023-10-28T06:59:06.864233 #277925]  INFO -- : [2bafba84-e34b-40e2-9aa1-ccc229186027]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2620dae7a3db34c696a0d517d056c68e8792ff6f", "filename"=>"bg-home-2"}
+I, [2023-10-28T06:59:06.864758 #277925]  INFO -- : [2bafba84-e34b-40e2-9aa1-ccc229186027] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:59:06.864915 #277925]  INFO -- : [2bafba84-e34b-40e2-9aa1-ccc229186027] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:59:06.856043 #277925]  INFO -- : [1d9c5db1-5c48-4a0c-94e2-5d971845d95b] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--45caae8adee47860d763a17e3e0617609f12d419/MERAPi.png" for 127.0.0.1 at 2023-10-28 06:59:06 +0300
+I, [2023-10-28T06:59:06.866781 #277925]  INFO -- : [1d9c5db1-5c48-4a0c-94e2-5d971845d95b] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:59:06.866901 #277925]  INFO -- : [1d9c5db1-5c48-4a0c-94e2-5d971845d95b]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--45caae8adee47860d763a17e3e0617609f12d419", "filename"=>"MERAPi"}
+I, [2023-10-28T06:59:06.867404 #277925]  INFO -- : [1d9c5db1-5c48-4a0c-94e2-5d971845d95b] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:59:06.867556 #277925]  INFO -- : [1d9c5db1-5c48-4a0c-94e2-5d971845d95b] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:59:06.869582 #277925]  INFO -- : [0d0164af-e2de-411f-b72d-0ec80855911d] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f553437460b488be5d0887e3bb057b9e4516a6e/crypto.png" for 127.0.0.1 at 2023-10-28 06:59:06 +0300
+I, [2023-10-28T06:59:06.871012 #277925]  INFO -- : [0d0164af-e2de-411f-b72d-0ec80855911d] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:59:06.871149 #277925]  INFO -- : [0d0164af-e2de-411f-b72d-0ec80855911d]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f553437460b488be5d0887e3bb057b9e4516a6e", "filename"=>"crypto"}
+I, [2023-10-28T06:59:06.871804 #277925]  INFO -- : [0d0164af-e2de-411f-b72d-0ec80855911d] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:59:06.873250 #277925]  INFO -- : [0d0164af-e2de-411f-b72d-0ec80855911d] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T06:59:06.883532 #277925]  INFO -- : [65be51a7-2174-4a9a-935a-2d990a4bff34] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--23bf60b7f749a314da9a2dbe6454ff266c8f2f63/rinjani-1.png" for 127.0.0.1 at 2023-10-28 06:59:06 +0300
+I, [2023-10-28T06:59:06.884705 #277925]  INFO -- : [65be51a7-2174-4a9a-935a-2d990a4bff34] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T06:59:06.884813 #277925]  INFO -- : [65be51a7-2174-4a9a-935a-2d990a4bff34]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--23bf60b7f749a314da9a2dbe6454ff266c8f2f63", "filename"=>"rinjani-1"}
+I, [2023-10-28T06:59:06.885347 #277925]  INFO -- : [65be51a7-2174-4a9a-935a-2d990a4bff34] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T06:59:06.885496 #277925]  INFO -- : [65be51a7-2174-4a9a-935a-2d990a4bff34] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T07:05:12.005413 #277925]  INFO -- : [b32a547c-fe0d-403f-a844-1b8020d30663] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b3bef8fda247f0b4d0adf95121b830503289aeba/logo-dark-2.png" for 127.0.0.1 at 2023-10-28 07:05:12 +0300
+I, [2023-10-28T07:05:12.011584 #277925]  INFO -- : [b32a547c-fe0d-403f-a844-1b8020d30663] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:12.013089 #277925]  INFO -- : [b32a547c-fe0d-403f-a844-1b8020d30663]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b3bef8fda247f0b4d0adf95121b830503289aeba", "filename"=>"logo-dark-2"}
+I, [2023-10-28T07:05:12.022706 #277925]  INFO -- : [b32a547c-fe0d-403f-a844-1b8020d30663] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:12.023011 #277925]  INFO -- : [b32a547c-fe0d-403f-a844-1b8020d30663] Completed 404 Not Found in 9ms (Allocations: 126)
+I, [2023-10-28T07:05:12.008053 #277925]  INFO -- : [17dadf67-f663-4dd2-b403-ec0cf376a8fd] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2620dae7a3db34c696a0d517d056c68e8792ff6f/bg-home-2.jpeg" for 127.0.0.1 at 2023-10-28 07:05:12 +0300
+I, [2023-10-28T07:05:12.024423 #277925]  INFO -- : [17dadf67-f663-4dd2-b403-ec0cf376a8fd] Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+I, [2023-10-28T07:05:12.024862 #277925]  INFO -- : [17dadf67-f663-4dd2-b403-ec0cf376a8fd]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2620dae7a3db34c696a0d517d056c68e8792ff6f", "filename"=>"bg-home-2"}
+I, [2023-10-28T07:05:12.025487 #277925]  INFO -- : [17dadf67-f663-4dd2-b403-ec0cf376a8fd] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:12.025722 #277925]  INFO -- : [17dadf67-f663-4dd2-b403-ec0cf376a8fd] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T07:05:12.012784 #277925]  INFO -- : [1c0700c3-36ab-446e-b624-39087597df07] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f553437460b488be5d0887e3bb057b9e4516a6e/crypto.png" for 127.0.0.1 at 2023-10-28 07:05:12 +0300
+I, [2023-10-28T07:05:12.027160 #277925]  INFO -- : [1c0700c3-36ab-446e-b624-39087597df07] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:12.027318 #277925]  INFO -- : [1c0700c3-36ab-446e-b624-39087597df07]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f553437460b488be5d0887e3bb057b9e4516a6e", "filename"=>"crypto"}
+I, [2023-10-28T07:05:12.027972 #277925]  INFO -- : [1c0700c3-36ab-446e-b624-39087597df07] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:12.028147 #277925]  INFO -- : [1c0700c3-36ab-446e-b624-39087597df07] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T07:05:12.012437 #277925]  INFO -- : [cafd7bb1-aa04-4339-8d16-32903bfc9453] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2ad301ddacab5466199dfb3e64055345707c189/crypto.png" for 127.0.0.1 at 2023-10-28 07:05:12 +0300
+I, [2023-10-28T07:05:12.013014 #277925]  INFO -- : [e4ac2e54-7d49-4747-b483-803bb09a70db] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b23f3d382ab99415b1bfffa2f580dc76c97d8f3/logo-dark-2.png" for 127.0.0.1 at 2023-10-28 07:05:12 +0300
+I, [2023-10-28T07:05:12.031101 #277925]  INFO -- : [e4ac2e54-7d49-4747-b483-803bb09a70db] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:12.031248 #277925]  INFO -- : [e4ac2e54-7d49-4747-b483-803bb09a70db]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b23f3d382ab99415b1bfffa2f580dc76c97d8f3", "filename"=>"logo-dark-2"}
+I, [2023-10-28T07:05:12.032720 #277925]  INFO -- : [e4ac2e54-7d49-4747-b483-803bb09a70db] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:12.032946 #277925]  INFO -- : [e4ac2e54-7d49-4747-b483-803bb09a70db] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T07:05:12.035576 #277925]  INFO -- : [cafd7bb1-aa04-4339-8d16-32903bfc9453] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:12.037163 #277925]  INFO -- : [cafd7bb1-aa04-4339-8d16-32903bfc9453]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2ad301ddacab5466199dfb3e64055345707c189", "filename"=>"crypto"}
+I, [2023-10-28T07:05:12.036930 #277925]  INFO -- : [659ab835-5285-4b2a-ad2f-4199202a5db5] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--45caae8adee47860d763a17e3e0617609f12d419/MERAPi.png" for 127.0.0.1 at 2023-10-28 07:05:12 +0300
+I, [2023-10-28T07:05:12.039008 #277925]  INFO -- : [659ab835-5285-4b2a-ad2f-4199202a5db5] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:12.041474 #277925]  INFO -- : [659ab835-5285-4b2a-ad2f-4199202a5db5]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--45caae8adee47860d763a17e3e0617609f12d419", "filename"=>"MERAPi"}
+I, [2023-10-28T07:05:12.042391 #277925]  INFO -- : [659ab835-5285-4b2a-ad2f-4199202a5db5] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:12.042728 #277925]  INFO -- : [659ab835-5285-4b2a-ad2f-4199202a5db5] Completed 404 Not Found in 1ms (Allocations: 131)
+I, [2023-10-28T07:05:12.041392 #277925]  INFO -- : [332c2819-01ba-4cba-a461-c84757d7f750] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c63997763e08eabd30cbcd3beb7e1d3a512c7909/MERAPi.png" for 127.0.0.1 at 2023-10-28 07:05:12 +0300
+I, [2023-10-28T07:05:12.047159 #277925]  INFO -- : [332c2819-01ba-4cba-a461-c84757d7f750] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:12.047530 #277925]  INFO -- : [332c2819-01ba-4cba-a461-c84757d7f750]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c63997763e08eabd30cbcd3beb7e1d3a512c7909", "filename"=>"MERAPi"}
+I, [2023-10-28T07:05:12.049412 #277925]  INFO -- : [332c2819-01ba-4cba-a461-c84757d7f750] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:12.049898 #277925]  INFO -- : [332c2819-01ba-4cba-a461-c84757d7f750] Completed 404 Not Found in 2ms (Allocations: 152)
+I, [2023-10-28T07:05:12.040082 #277925]  INFO -- : [3b7014a6-e8b5-4156-82c0-035cc141bdee] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--23bf60b7f749a314da9a2dbe6454ff266c8f2f63/rinjani-1.png" for 127.0.0.1 at 2023-10-28 07:05:12 +0300
+I, [2023-10-28T07:05:12.051983 #277925]  INFO -- : [3b7014a6-e8b5-4156-82c0-035cc141bdee] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:12.052122 #277925]  INFO -- : [3b7014a6-e8b5-4156-82c0-035cc141bdee]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--23bf60b7f749a314da9a2dbe6454ff266c8f2f63", "filename"=>"rinjani-1"}
+I, [2023-10-28T07:05:12.040703 #277925]  INFO -- : [cafd7bb1-aa04-4339-8d16-32903bfc9453] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:12.052814 #277925]  INFO -- : [cafd7bb1-aa04-4339-8d16-32903bfc9453] Completed 404 Not Found in 15ms (Allocations: 2792)
+I, [2023-10-28T07:05:12.053383 #277925]  INFO -- : [3b7014a6-e8b5-4156-82c0-035cc141bdee] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:12.053556 #277925]  INFO -- : [3b7014a6-e8b5-4156-82c0-035cc141bdee] Completed 404 Not Found in 1ms (Allocations: 282)
+I, [2023-10-28T07:05:29.336683 #277925]  INFO -- : [e3ca7c7d-d482-4d37-99c1-d6df56b4ebd5] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2620dae7a3db34c696a0d517d056c68e8792ff6f/bg-home-2.jpeg" for 127.0.0.1 at 2023-10-28 07:05:29 +0300
+I, [2023-10-28T07:05:29.339349 #277925]  INFO -- : [e3ca7c7d-d482-4d37-99c1-d6df56b4ebd5] Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+I, [2023-10-28T07:05:29.339727 #277925]  INFO -- : [e3ca7c7d-d482-4d37-99c1-d6df56b4ebd5]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2620dae7a3db34c696a0d517d056c68e8792ff6f", "filename"=>"bg-home-2"}
+I, [2023-10-28T07:05:29.342376 #277925]  INFO -- : [e3ca7c7d-d482-4d37-99c1-d6df56b4ebd5] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:29.342586 #277925]  INFO -- : [e3ca7c7d-d482-4d37-99c1-d6df56b4ebd5] Completed 404 Not Found in 1ms (Allocations: 127)
+I, [2023-10-28T07:05:29.340188 #277925]  INFO -- : [25c2d041-c776-42ad-bc10-c7248fc27fd0] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b3bef8fda247f0b4d0adf95121b830503289aeba/logo-dark-2.png" for 127.0.0.1 at 2023-10-28 07:05:29 +0300
+I, [2023-10-28T07:05:29.343937 #277925]  INFO -- : [25c2d041-c776-42ad-bc10-c7248fc27fd0] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:29.341717 #277925]  INFO -- : [0d2f4b93-562c-4298-b95e-fd0d4107f4cd] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f553437460b488be5d0887e3bb057b9e4516a6e/crypto.png" for 127.0.0.1 at 2023-10-28 07:05:29 +0300
+I, [2023-10-28T07:05:29.338652 #277925]  INFO -- : [f2223a26-75f0-4e76-b052-82a7a30c0842] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2ad301ddacab5466199dfb3e64055345707c189/crypto.png" for 127.0.0.1 at 2023-10-28 07:05:29 +0300
+I, [2023-10-28T07:05:29.344900 #277925]  INFO -- : [f2223a26-75f0-4e76-b052-82a7a30c0842] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:29.347977 #277925]  INFO -- : [f2223a26-75f0-4e76-b052-82a7a30c0842]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2ad301ddacab5466199dfb3e64055345707c189", "filename"=>"crypto"}
+I, [2023-10-28T07:05:29.348812 #277925]  INFO -- : [f2223a26-75f0-4e76-b052-82a7a30c0842] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:29.349065 #277925]  INFO -- : [f2223a26-75f0-4e76-b052-82a7a30c0842] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T07:05:29.341133 #277925]  INFO -- : [d825eeca-cf3f-4a4c-af14-1dcef170f14c] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b23f3d382ab99415b1bfffa2f580dc76c97d8f3/logo-dark-2.png" for 127.0.0.1 at 2023-10-28 07:05:29 +0300
+I, [2023-10-28T07:05:29.351692 #277925]  INFO -- : [d825eeca-cf3f-4a4c-af14-1dcef170f14c] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:29.351820 #277925]  INFO -- : [d825eeca-cf3f-4a4c-af14-1dcef170f14c]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b23f3d382ab99415b1bfffa2f580dc76c97d8f3", "filename"=>"logo-dark-2"}
+I, [2023-10-28T07:05:29.352515 #277925]  INFO -- : [d825eeca-cf3f-4a4c-af14-1dcef170f14c] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:29.352735 #277925]  INFO -- : [d825eeca-cf3f-4a4c-af14-1dcef170f14c] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T07:05:29.344975 #277925]  INFO -- : [25c2d041-c776-42ad-bc10-c7248fc27fd0]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b3bef8fda247f0b4d0adf95121b830503289aeba", "filename"=>"logo-dark-2"}
+I, [2023-10-28T07:05:29.354169 #277925]  INFO -- : [25c2d041-c776-42ad-bc10-c7248fc27fd0] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:29.354664 #277925]  INFO -- : [25c2d041-c776-42ad-bc10-c7248fc27fd0] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T07:05:29.346354 #277925]  INFO -- : [0d2f4b93-562c-4298-b95e-fd0d4107f4cd] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:29.355326 #277925]  INFO -- : [0d2f4b93-562c-4298-b95e-fd0d4107f4cd]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f553437460b488be5d0887e3bb057b9e4516a6e", "filename"=>"crypto"}
+I, [2023-10-28T07:05:29.356145 #277925]  INFO -- : [0d2f4b93-562c-4298-b95e-fd0d4107f4cd] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:29.356322 #277925]  INFO -- : [0d2f4b93-562c-4298-b95e-fd0d4107f4cd] Completed 404 Not Found in 1ms (Allocations: 126)
+I, [2023-10-28T07:05:29.358883 #277925]  INFO -- : [e170cb81-95a2-4429-a91b-fd913a7376ad] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--45caae8adee47860d763a17e3e0617609f12d419/MERAPi.png" for 127.0.0.1 at 2023-10-28 07:05:29 +0300
+I, [2023-10-28T07:05:29.362048 #277925]  INFO -- : [e170cb81-95a2-4429-a91b-fd913a7376ad] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:29.364475 #277925]  INFO -- : [e170cb81-95a2-4429-a91b-fd913a7376ad]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--45caae8adee47860d763a17e3e0617609f12d419", "filename"=>"MERAPi"}
+I, [2023-10-28T07:05:29.368125 #277925]  INFO -- : [e170cb81-95a2-4429-a91b-fd913a7376ad] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:29.369419 #277925]  INFO -- : [e170cb81-95a2-4429-a91b-fd913a7376ad] Completed 404 Not Found in 4ms (Allocations: 192)
+I, [2023-10-28T07:05:29.363696 #277925]  INFO -- : [5b085595-96db-43f9-9606-772bd016f851] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c63997763e08eabd30cbcd3beb7e1d3a512c7909/MERAPi.png" for 127.0.0.1 at 2023-10-28 07:05:29 +0300
+I, [2023-10-28T07:05:29.371254 #277925]  INFO -- : [5b085595-96db-43f9-9606-772bd016f851] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:29.371402 #277925]  INFO -- : [5b085595-96db-43f9-9606-772bd016f851]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c63997763e08eabd30cbcd3beb7e1d3a512c7909", "filename"=>"MERAPi"}
+I, [2023-10-28T07:05:29.373850 #277925]  INFO -- : [5b085595-96db-43f9-9606-772bd016f851] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:29.375166 #277925]  INFO -- : [5b085595-96db-43f9-9606-772bd016f851] Completed 404 Not Found in 4ms (Allocations: 193)
+I, [2023-10-28T07:05:29.375792 #277925]  INFO -- : [e7249c13-2255-4336-9ce8-c475098cebe4] Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--23bf60b7f749a314da9a2dbe6454ff266c8f2f63/rinjani-1.png" for 127.0.0.1 at 2023-10-28 07:05:29 +0300
+I, [2023-10-28T07:05:29.378684 #277925]  INFO -- : [e7249c13-2255-4336-9ce8-c475098cebe4] Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+I, [2023-10-28T07:05:29.378862 #277925]  INFO -- : [e7249c13-2255-4336-9ce8-c475098cebe4]   Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--23bf60b7f749a314da9a2dbe6454ff266c8f2f63", "filename"=>"rinjani-1"}
+I, [2023-10-28T07:05:29.379341 #277925]  INFO -- : [e7249c13-2255-4336-9ce8-c475098cebe4] Filter chain halted as :set_blob rendered or redirected
+I, [2023-10-28T07:05:29.380311 #277925]  INFO -- : [e7249c13-2255-4336-9ce8-c475098cebe4] Completed 404 Not Found in 1ms (Allocations: 138)
