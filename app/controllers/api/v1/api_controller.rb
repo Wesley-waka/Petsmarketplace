@@ -29,7 +29,6 @@ module Api
       def authenticate_request
         token = request.headers['Authorization']&.split(' ')&.last
         return render json: { error: 'Missing token, Please Provide the user token!' }, status: :unauthorized unless token
-
         user = user_token_encode_and_decode(token)
         current_user = sign_in(user, store: false) if user.present?
       end

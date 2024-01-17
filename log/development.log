@@ -4368,3 +4368,191 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 130)
 
 
+Started GET "/ws" for ::1 at 2024-01-17 21:28:54 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2024-01-17 21:29:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/api/v1/ads" for 127.0.0.1 at 2024-01-17 21:29:12 +0300
+Processing by Api::V1::AdsController#index as JSON
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 23ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2155)
+
+
+Started POST "/signup" for 127.0.0.1 at 2024-01-17 21:31:08 +0300
+Processing by Users::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"wesleywaka72@gmail.com", "password"=>"[FILTERED]", "username"=>"Wesley Waka"}}
+[31mUnpermitted parameter: :username. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007ff22c2691b8>, params: {"user"=>{"email"=>"wesleywaka72@gmail.com", "password"=>"[FILTERED]", "username"=>"Wesley Waka"}, "controller"=>"users/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "wesleywaka72@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "jti", "password_token_valid", "is_active", "activation_token", "activation_token_expires_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "user_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "wesleywaka72@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-17 18:31:08.495148"], ["updated_at", "2024-01-17 18:31:08.495148"], ["jti", "52ea9d58-947a-4723-9f61-f51ae25c015a"], ["password_token_valid", "[FILTERED]"], ["is_active", 0], ["activation_token", "[FILTERED]"], ["activation_token_expires_at", "[FILTERED]"], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2024-01-17 18:31:08.495322"], ["unconfirmed_email", nil], ["user_name", nil]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37:in `user_profile_creation'
+  [1m[36mProfile Create (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("first_name", "last_name", "bio", "account_type", "language", "location", "facebook_url", "twitter_url", "linkedin_url", "whatsapp_url", "user_id", "created_at", "updated_at", "profile_image", "phone_number") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", nil], ["last_name", nil], ["bio", nil], ["account_type", nil], ["language", nil], ["location", nil], ["facebook_url", nil], ["twitter_url", nil], ["linkedin_url", nil], ["whatsapp_url", nil], ["user_id", 5], ["created_at", "2024-01-17 18:31:08.541952"], ["updated_at", "2024-01-17 18:31:08.541952"], ["profile_image", nil], ["phone_number", nil]]
+  ↳ app/models/user.rb:37:in `user_profile_creation'
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (Duration: 2.4ms | Allocations: 179)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 27.7ms
+Delivered mail 65a81cec9e565_70c92e541384@wesleywaka-HP-ProBook-450-G3.mail (4587.0ms)
+Date: Wed, 17 Jan 2024 21:31:08 +0300
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: wesleywaka72@gmail.com
+Message-ID: <65a81cec9e565_70c92e541384@wesleywaka-HP-ProBook-450-G3.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Petshelpful Website Confirmation</p>
+
+<p>Dear wesleywaka72@gmail.com!</p>
+
+<p>Thank you for signing up with Petshelpful! We're thrilled to have you on board. To complete your registration, please click the confirmation link below:</p>
+
+<p><a href="http://localhost:3001/signin?confirmation_token=wRGjAa4oWb76msje_6F-">Confirm my account</a></p>
+
+<p>Once you've confirmed your email, you'll be redirected to the sign-in page. If you have any questions or need assistance, don't hesitate to reach out to our support team.</p>
+
+<p>Welcome to the Petshelpful community!</p>
+
+<p>Best regards,</p>
+<p>Petshelpful Team</p>
+  Rendering users/registrations/create_user.json.jbuilder
+  Rendered users/registrations/_show.json.jbuilder (Duration: 1.3ms | Allocations: 111)
+  Rendered users/registrations/create_user.json.jbuilder (Duration: 32.7ms | Allocations: 479)
+Completed 200 OK in 5085ms (Views: 37.4ms | ActiveRecord: 25.0ms | Allocations: 65121)
+
+
+Started POST "/account_confirmation" for 127.0.0.1 at 2024-01-17 21:31:38 +0300
+Processing by Users::ConfirmationsController#show as JSON
+  Parameters: {"user"=>{"confirmation_token"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = ? LIMIT ?[0m  [["confirmation_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users/confirmations_controller.rb:11:in `show'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/confirmations_controller.rb:20:in `show'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "is_active" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2024-01-17 18:31:38.919008"], ["is_active", 1], ["id", 5]]
+  ↳ app/controllers/users/confirmations_controller.rb:20:in `show'
+  [1m[36mTRANSACTION (18.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/confirmations_controller.rb:20:in `show'
+Completed 200 OK in 32ms (Views: 0.6ms | ActiveRecord: 20.2ms | Allocations: 3350)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-17 21:32:09 +0300
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"wesleywaka72@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "wesleywaka72@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:8:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "wesleywaka72@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:19:in `authenticate'
+Completed 200 OK in 266ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 2138)
+
+
+Started GET "/api/v1/ads" for 127.0.0.1 at 2024-01-17 21:32:10 +0300
+Processing by Api::V1::AdsController#index as JSON
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 231)
+
+
+Started GET "/api/v1/ads" for 127.0.0.1 at 2024-01-17 21:32:21 +0300
+Processing by Api::V1::AdsController#index as JSON
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 197)
+
+
+Started GET "/api/v1/ads" for 127.0.0.1 at 2024-01-17 21:32:28 +0300
+Processing by Api::V1::AdsController#index as JSON
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 197)
+
+
+Started GET "/api/v1/ads" for 127.0.0.1 at 2024-01-17 21:33:47 +0300
+Processing by Api::V1::AdsController#index as */*
+  Parameters: {"username"=>"Wesley Waka", "email"=>"wesleywaka77@gmail.com", "password"=>"[FILTERED]"}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 23ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 121)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-17 21:40:01 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"wesleywaka72@gmail.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 2ms (Allocations: 167)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/users/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-01-17 21:47:32 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"email"=>"wesleywaka72@gmail.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 0ms (Allocations: 138)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/users/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-01-17 21:51:36 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"wesleywaka72@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"wesleywaka72@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "wesleywaka72@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:8:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "wesleywaka72@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:19:in `authenticate'
+Completed 200 OK in 334ms (Views: 0.3ms | ActiveRecord: 7.8ms | Allocations: 1649)
+
+
+Started POST "/api/v1/ads" for 127.0.0.1 at 2024-01-17 21:52:03 +0300
+Processing by Api::V1::AdsController#create as */*
+  Parameters: {"user"=>{"email"=>"wesleywaka72@gmail.com", "password"=>"[FILTERED]"}, "ad"=>{}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 1.8ms | ActiveRecord: 1.2ms | Allocations: 196)
+
+
+Started POST "/api/v1/ads" for 127.0.0.1 at 2024-01-17 21:54:51 +0300
+Processing by Api::V1::AdsController#create as */*
+  Parameters: {"user"=>{"email"=>"wesleywaka72@gmail.com", "password"=>"[FILTERED]"}, "ad"=>{}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 198)
+
+
+Started GET "/api/v1/ads" for 127.0.0.1 at 2024-01-17 22:02:59 +0300
+Processing by Api::V1::AdsController#index as */*
+  Parameters: {"user"=>{"email"=>"wesleywaka72@gmail.com", "password"=>"[FILTERED]"}, "ad"=>{}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 313)
+
+
+Started GET "/api/v1/ads" for 127.0.0.1 at 2024-01-17 22:03:14 +0300
+Processing by Api::V1::AdsController#index as */*
+  Parameters: {"user"=>{"email"=>"wesleywaka72@gmail.com", "password"=>"[FILTERED]"}, "ad"=>{}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 197)
+
+
+Started GET "/api/v1/ads" for 127.0.0.1 at 2024-01-17 22:03:57 +0300
+Processing by Api::V1::AdsController#index as */*
+  Parameters: {"user"=>{"email"=>"wesleywaka72@gmail.com", "password"=>"[FILTERED]"}, "ad"=>{}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 197)
+
+
+Started GET "/api/v1/ads" for 127.0.0.1 at 2024-01-17 22:08:40 +0300
+Started GET "/api/v1/profiles/show_profile" for 127.0.0.1 at 2024-01-17 22:08:40 +0300
+Processing by Api::V1::AdsController#index as JSON
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 52ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1586)
+
+
+Processing by Api::V1::ProfilesController#show_profile as JSON
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 302)
+
+
